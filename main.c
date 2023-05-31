@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int generate_tree(int hight, int width){
+    return 0;
+}
+
 int main(void) {
   int choice = 0;
 
@@ -46,6 +50,10 @@ int main(void) {
           printf("Enter width (3 - 30):");
           scanf("%d", &width);
         }
+
+        generate_labyrinth(hight, width);
+
+        break;
       }
     }
   }

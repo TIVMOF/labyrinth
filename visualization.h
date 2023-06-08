@@ -1,0 +1,1 @@
+void visualize_labyrinth(int labyrinth[40][30], int rows, int columns);

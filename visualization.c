@@ -34,4 +34,6 @@ void visualize_labyrinth(int labyrinth[40][30], int rows, int columns, int hero_
     for(int i = 0; i < columns + 2; i++){
         printf("#");
     }
+
+    printf("\n");
 }

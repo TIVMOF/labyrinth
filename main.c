@@ -60,7 +60,7 @@ int main(void) {
           scanf("%d", &width);
         }
 
-        visualize_labyrinth(maze, 40, 30);
+        visualize_labyrinth(maze, 40, 30, 4, 5);
 
         break;
       }

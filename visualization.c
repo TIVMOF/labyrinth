@@ -11,17 +11,15 @@ void visualize_labyrinth(int labyrinth[40][30], int rows, int columns, int hero_
         printf("#");
 
         for (int j = 0; j < columns; j++) {
-            if (labyrinth[i][j] == 1) {
-                printf("#");
-            }
-
-            if (labyrinth[i][j] == 0) {
-                printf(" ");
-            }
-
             if(i == hero_x && j == hero_y){
                 printf("@");
             }
+          
+            else if (labyrinth[i][j] == 1) {
+                printf("#");
+            }
+
+            else printf(" ");
         }
 
         printf("#\n");

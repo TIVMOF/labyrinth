@@ -114,3 +114,4 @@ void stack_print(Stack* s) {
     	printf("Stack[%d] = %d\n", i, *((int*)stack_at(s, i)));
 
 };
+

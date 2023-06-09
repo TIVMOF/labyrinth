@@ -23,7 +23,7 @@ void _vector_remove_last(struct _vector_t* vec) {
 }
 
 struct Cell _vector_get(struct _vector_t* vec, int index) {
-  if(index >= vec->size) return;
+  if(index >= vec->size) return vec->values[0];
   return vec->values[index];
 }
 

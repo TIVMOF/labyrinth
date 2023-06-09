@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "vector.h"
 #include "queue.h"
-#include "visualization.h"
+#include "../visualization.h"
 #include "graph.h"
 
 
@@ -220,5 +220,4 @@ void a_star(int rows, int columns, int maze[rows][columns]) {
                     );
 
     print_path(route, rows, columns, maze);
-
 }

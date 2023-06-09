@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "vector_for_right_wall_hugging.h"
-#include "../a_star/visualization.h"
+#include "../visualization.h"
 
 
 int _check_right(int rows, int columns, int maze[rows][columns], struct Cell cord) {

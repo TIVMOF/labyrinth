@@ -9,15 +9,6 @@
 //2 - start
 //3 - end
 
-void print(int x, int y, int maze[][x]){
-    for(int i = 0 ; i  < y ; i++){
-        for(int j = 0 ; j  < x ; j++){
-            printf("%d ", maze[i][j]);
-        }
-        printf("\n");
-    }
-}
-
 // removes the 0s and 1s
 void start_again(int x, int y, int maze[][x], struct Cell_coords* curr, int start_x, int start_y, int end_x, int end_y){
     for(int i = 0 ; i  < y ; i++){
@@ -39,6 +30,10 @@ int is_visitable(int x, int y, int maze[][x], int curr_x, int curr_y, struct Cel
     curr_y < 0 || curr_y >= y
     ){
         return 0;
+    }
+
+    if(maze[curr_y][curr_x] == 3){
+        return 1;
     }
 
     if(maze[curr_y][curr_x] == 0){

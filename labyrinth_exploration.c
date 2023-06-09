@@ -32,7 +32,7 @@ void explore_labyrinth(int rows, int columns, int labyrinth[][columns], int* sta
       }
     }
 
-    if (new_row >= 0 && new_row < columns && new_column >= 0 && new_column < rows + 1) {
+    if (new_row >= 0 && new_row < columns && new_column >= 0 && new_column < rows) {
         if (labyrinth[new_column][new_row] == 0) {
             labyrinth[*start_column][*start_row] = 0;
             labyrinth[new_column][new_row] = 2;

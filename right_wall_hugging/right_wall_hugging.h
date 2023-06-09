@@ -1,0 +1,1 @@
+void right_wall_hugging(int rows, int columns, int maze[rows][columns]);

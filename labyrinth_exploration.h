@@ -1,1 +1,1 @@
-void explore_labyrinth(int rows, int columns, int labyrinth[][cols], int* start_row, int* start_column, int direction)
+void explore_labyrinth(int rows, int columns, int labyrinth[][columns], int* start_row, int* start_column, int direction);

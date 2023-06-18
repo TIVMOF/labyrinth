@@ -152,9 +152,15 @@ void right_wall_hugging(int rows, int columns, int maze[rows][columns]) {
     cord.y = 0;
 
     _vector_add(all_past_moves, cord);
+    int maze_copy[rows][columns];
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < columns; j++) {
+            maze_copy[i][j] = maze[i][j];
+        }
+    }
     while(cord.x != columns-1 || cord.y != rows-1) {
-        maze[cord.y][cord.x] = 4;
-        cord = _check_next(rows, columns, maze, cord, all_past_moves);
+        maze_copy[cord.y][cord.x] = 4;
+        cord = _check_next(rows, columns, maze_copy, cord, all_past_moves);
 
         if(!_check_same_as_last(all_past_moves, cord)) {
             _vector_add(all_past_moves, cord);
@@ -166,7 +172,7 @@ void right_wall_hugging(int rows, int columns, int maze[rows][columns]) {
     }
 
     for(int i = 0; i < all_past_moves->size; i++) {
-        visualize_labyrinth(rows, columns, maze, all_past_moves->values[i].x, all_past_moves->values[i].y);
+        visualize_labyrinth(rows, columns, maze_copy, all_past_moves->values[i].x, all_past_moves->values[i].y);
         printf("\n\n");
     }
 }

@@ -70,9 +70,9 @@ int change_node_priority (struct queue_t* q, void* node, int new_priority){
 
         if(is_in_queue) {
             if(curr->next->next != NULL) {
-                struct queue_node_t* temp = curr->next;
+                struct queue_node_t* temp = curr->next->next;
                 free(curr->next);
-                curr->next = curr->next->next;
+                curr->next = temp;
             }
             else
                 curr->next = NULL;
